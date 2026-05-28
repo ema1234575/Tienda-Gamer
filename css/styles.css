@@ -159,7 +159,6 @@ main .nombre_pre:hover {
     grid-template-columns: 3fr 2fr;
     background-color: white;
     padding: 30px 100px;
-    border-radius: 10px;
     font-size: 20px;
 }
 
@@ -170,7 +169,10 @@ main .nombre_pre:hover {
     gap: 10px;
     padding: 10px 50px;
     padding-bottom: 30px;
-    border-radius: 5px;
+}
+
+#form-container form {
+    border-right: 1px solid black;
 }
 
 #form-container form h2 {
@@ -182,7 +184,7 @@ main .nombre_pre:hover {
 }
 
 #email,
-#passw {
+#contraseña {
     height: 40px;
     border: 2px solid black;
     border-radius: 10px;

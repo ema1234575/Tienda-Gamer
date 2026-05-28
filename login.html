@@ -41,12 +41,13 @@
     <main>
 
         <div id="form-container">
-            <form action="#">
+
+            <form onsubmit=" return inicioSesion()">
                 <h2>Iniciar Sesión</h2>
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
                 <label for="key">Contraseña</label>
-                <input type="text" id="passw" name="password">
+                <input type="text" id="contraseña" name="contraseña" required>
                 <input class="boton_comprar" type="submit" value="Ingresar">
                 <p style="color:blue; cursor:pointer">¿Olvidaste tu contraseña?</p>
             </form>
@@ -55,6 +56,7 @@
                 <h3>¿No tienes una cuenta?</h3>
                 <button class="boton_comprar" type="button">Crear cuenta</button>
             </div>
+
         </div>
 
     </main>
@@ -75,5 +77,23 @@
     </footer>
 
 </body>
+
+<script>
+
+    function inicioSesion() {
+        var email = document.getElementById('email').value;
+        var contraseña = document.getElementById('contraseña').value;
+
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Por favor, introduzca una dirección de correo electrónico válida.');
+            return false;
+        }
+
+        alert('Inicio de sesion exitoso');
+        return true;
+    }
+
+</script>
 
 </html>
